@@ -1,3 +1,4 @@
+const { SAY, MOVE } = require("./constants");
 let connection;
 
 const setupInput = function(conn) {
@@ -12,22 +13,22 @@ const setupInput = function(conn) {
     }
     switch (data) {
       case "w":
-        connection.write("Move: up");
+        connection.write(MOVE.W);
         break;
       case "s":
-        connection.write("Move: down");
+        connection.write(MOVE.S);
         break;
       case "a":
-        connection.write("Move: left");
+        connection.write(MOVE.A);
         break;
       case "d":
-        connection.write("Move: right");
+        connection.write(MOVE.D);
         break;
       case "q":
-        connection.write("Say: OnYourLeft");
+        connection.write(SAY.Q);
         break;
       case "e":
-        connection.write("Say: OnYourRight");
+        connection.write(SAY.E);
         break;
 
       default:
