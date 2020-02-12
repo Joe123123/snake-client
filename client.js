@@ -9,6 +9,9 @@ const connect = function() {
   conn.on("data", data => {
     console.log(data);
   });
+  conn.on("connect", () => {
+    conn.write("Name: ZJW");
+  });
   return conn;
 };
 module.exports = { connect };
