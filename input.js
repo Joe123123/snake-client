@@ -23,6 +23,12 @@ const setupInput = function(conn) {
       case "d":
         connection.write("Move: right");
         break;
+      case "q":
+        connection.write("Say: OnYourLeft");
+        break;
+      case "e":
+        connection.write("Say: OnYourRight");
+        break;
 
       default:
         break;
